@@ -1,0 +1,21 @@
+319
+pinfo
+gedit
+gedit &
+pinfo 8685
+fg 8685
+fg %8685
+pinfo 8685
+pinfo
+pinfo 8917
+pinfo 8685
+pinfo 8917
+gedit
+pinfo 9246
+gedit
+pinfo 9246
+pinfo
+gedit
+gedit &
+pinfo 10544
+pinfo 8457

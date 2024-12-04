@@ -1,0 +1,44 @@
+gethostname() returns the null-terminated hostname in the character array name, which has a length of len bytes.
+
+The getlogin_r() function shall put the name associated by the login activity with the controlling terminal of the current process in the character array pointed to by name.
+
+'proc': A virtual filesystem in Unix-like operating systems that provides an interface to kernel data structures. It contains information about system processes and other kernel information.
+
+getcwd(CWD, sizeof(CWD)
+get the pathname of the current working directory
+getcwd(NULL, 0): The getcwd function retrieves the current working directory. When you pass NULL as the first argument and 0 as the second argument: NULL indicates that getcwd should allocate memory dynamically to store the path. 0 specifies that getcwd should allocate enough memory to hold the entire path.
+
+p = strstr(CWD, HOME);
+locate the first occurrence in the string pointed to by s1 of the sequence of bytes in the string pointed to by s2.  
+
+strtok() is a function used to split a string into a sequence of tokens based on specified delimiters. It modifies the original string by inserting null characters ('\0') to terminate each token.
+
+Thread Safety: strtok() is not thread-safe because it relies on internal state to track the position in the string. For thread-safe tokenization, use strtok_r() instead.
+
+The strtok_r() function is a reentrant (thread-safe) version of strtok() in C. It allows multiple threads to tokenize strings simultaneously without interfering with each other, as it doesn't rely on internal state. Instead, strtok_r() requires an additional argument to maintain the context of the tokenization.
+It looks for the first token which is not a delimiter.
+
+
+char *str = "Hello, World!";  // Pointer to the first character of the string
+printf("String: %s\n", str);  // Print the string
+printf("First character: %c\n", *str);  // Print the first character
+
+A double pointer is a pointer that points to another pointer. In the case of char, a char** is a pointer to a char*, which in turn points to a char (a single character or a string).
+
+char *fruits[] = {"Apple", "Banana", "Cherry"};
+
+    // Double pointer pointing to the array of strings
+    char **ptr = fruits;
+
+    // Print each string using the double pointer
+    for (int i = 0; i < 3; i++) {
+        printf("%s\n", *(ptr + i));
+    }
+    
+readlink() places the contents of the symbolic link pathname in the buffer buf, which has size bufsiz.  readlink() does not append a terminating null byte to buf.
+The readlink() function in C is used to read the value of a symbolic link. A symbolic link (or symlink) is a special type of file that contains a reference (a path) to another file or directory. The readlink() function allows you to retrieve this reference.
+    
+chdir() changes the current working directory of the calling process to the directory specified in path. On success, zero is returned.  On error, -1 is returned, and errno is set to indicate the error.
+
+strcpy(dst,src)
+copy source to destination (right to left)
